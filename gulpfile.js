@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const minifyCSS = require('gulp-csso')
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('hello', function(done) {
   console.log('Привет, мир!');
@@ -14,15 +14,14 @@ gulp.task('browser-sync', function() {
           baseDir: "./"
       }
   });
-  gulp.watch("src/css/*.css")on('change', browserSync.reload);
   gulp.watch("./*.html").on('change', browserSync.reload);
+  gulp.watch("src/css/*.css").on('change', browserSync.reload);
 });
-
 
 gulp.task('mincss', function() {
   return gulp.src("src/css/*.css")
   .pipe(rename({suffix: ".min"}))
-  .pipe(minifyCSS())
+  .pipe(cleanCSS())
   .pipe(gulp.dest("dist/css"));
   })
 
