@@ -1,0 +1,22 @@
+{
+  "name": "web-start_7",
+  "version": "1.0.0",
+  "description": "Моя домашка",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dias78/Web-start_7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dias78/Web-start_7/issues"
+  },
+  "homepage": "https://github.com/Dias78/Web-start_7#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
