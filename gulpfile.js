@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const cssnano = require("gulp-cssnano");
+// const cleanCSS = require('gulp-clean-css');
+const sass = require('gulp-sass');
+
 
 gulp.task('hello', function(done) {
   console.log('Привет, мир!');
@@ -18,20 +20,11 @@ gulp.task('browser-sync', function() {
   gulp.watch("src/css/*.css").on('change', browserSync.reload);
 });
 
-function css() {
-  return src("src/css/*.css")
-  .pipe(removeComments())
-  .pipe(rename({
-      suffix: ".min",
-      extname: ".css"
-  }))
-  .pipe(dest("dist/css"));
-  };
-
-  function sass () {
-    return gulp.src('./src/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest("dist/css"))
- };
-
-  exports.css = css;
+gulp.task('minify-css', () => {
+  return gulp.src('src/**/*.css')
+    .pipe(cleanCSS({debug: true}, (details) => {
+      console.log(`${details.name}: ${details.stats.originalSize}`);
+      console.log(`${details.name}: ${details.stats.minifiedSize}`);
+    }))
+  .pipe(gulp.dest('dist'));
+});
