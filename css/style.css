@@ -327,7 +327,7 @@ template {
   .button:hover {
     cursor: pointer; }
   .button--primary {
-    padding: 11px 20px;
+    padding: 18px 26px;
     background-color: #E3B873;
     color: #fff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -410,6 +410,9 @@ body {
 
 .contacts__phone {
   margin-right: 3.21rem; }
+
+.contacts__button {
+  padding: 11px 20px; }
 
 .hero {
   position: relative;
