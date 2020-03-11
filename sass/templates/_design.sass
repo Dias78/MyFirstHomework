@@ -1,0 +1,38 @@
+.design
+  &__section-title
+    margin-bottom: 1.2rem
+  &__section-subtitle
+    max-width: 52.92rem
+    font-family: 'Futura Book', sans-serif
+    font-size: 1.428rem
+    line-height: 1.3
+    text-align: center
+    margin: 0 auto
+    margin-bottom: 3.4rem
+.card
+  &__inner
+    position: relative
+    max-width: 28rem
+    max-height: 30.14rem
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: rgba($dark, 0.3)
+  &__pricetag--design
+    position: absolute
+    left: 0
+    bottom: -1.79rem
+    font-size: 1.29rem
+    font-family: 'Yeseva One', cursive
+    font-weight: normal
+    text-transform: uppercase
+    background-color: $primary
+    color: $light
+    box-shadow: 5px 5px 10px rgba($primary, 0.1)
+    padding: 1.214rem 3.9rem
+    &:hover
+      box-shadow: none
