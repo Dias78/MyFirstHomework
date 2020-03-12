@@ -552,7 +552,8 @@ body {
     box-shadow: none; }
 
 .design__section-title {
-  margin-bottom: 1.2rem; }
+  margin-bottom: 1.2rem;
+  z-index: 2; }
 
 .design__section-subtitle {
   max-width: 52.92rem;
@@ -599,7 +600,7 @@ body {
   .nav__item {
     margin-right: 1rem; }
   .contacts__phone {
-    margin-right: 2.5rem; } }
+    margin-right: 2.3rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -647,4 +648,12 @@ body {
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
+    display: none; } }
+
+@media screen and (max-width: 320px) {
+  .design {
+    background: #252525; }
+  .section-title {
+    position: relative; }
+  .card__inner::before {
     display: none; } }
