@@ -2,13 +2,13 @@
   html
     font-size: 12px
   .logo
-    margin-right: 4rem
+    margin-right: 3.5rem
   .nav
     &__item
-      margin-right: 1rem
+      margin-right: 1.5rem
   .contacts
     &__phone
-      margin-right: 2.3rem
+      margin-right: 1rem
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -20,7 +20,7 @@
 @media screen and ( max-width: 760px )
   .contacts
     &__phone
-      margin-right: 1.3rem
+      margin-right: 1rem
   .row
     flex-direction: column
     align-items: center
@@ -57,6 +57,13 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+@media screen and ( max-height: 992px )
+  .nav
+    &__item
+      margin-right: 1rem
+  .contacts
+    &__phone
+      margin-right: 2rem
 @media screen and ( max-height: 570px )
   .hero
     &__scroll-down
@@ -64,8 +71,8 @@
 @media screen and ( max-width: 320px )
   .design
     background: #252525
-  .section-title
-    position: relative
+    &__section-title
+      color: $light
   .card
     &__inner::before
       display: none
