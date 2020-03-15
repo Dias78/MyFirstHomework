@@ -528,7 +528,9 @@ body {
     margin: 0;
     margin-bottom: 3.25rem; }
   .hero__button {
-    margin-right: 16px; }
+    margin-right: 16px;
+    position: relative;
+    z-index: 5; }
   .hero__instagram {
     position: absolute;
     top: 0;
@@ -594,6 +596,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 4.1rem; }
+  .swiper-slide__img {
+    width: 100%; }
   .swiper-slide__text {
     flex-basis: 34%;
     margin-bottom: 1.1rem;
@@ -672,9 +676,8 @@ body {
     box-shadow: none; }
 
 .section-title__subtitle {
-  max-width: 52.92rem;
-  font-family: 'Futura Book', sans-serif;
-  font-size: 1.428rem;
+  max-width: 53rem;
+  font-size: 1.42rem;
   line-height: 1.4;
   text-align: center;
   margin: 0 auto;
@@ -682,9 +685,7 @@ body {
   margin-bottom: 3.4rem; }
 
 .card__inner {
-  position: relative;
-  max-width: 28rem;
-  max-height: 30.14rem; }
+  position: relative; }
   .card__inner::before {
     content: '';
     position: absolute;
@@ -769,7 +770,11 @@ body {
   .nav__item {
     margin-right: 1.5rem; }
   .contacts__phone {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .swiper-slide {
+    flex-basis: 100%; }
+    .swiper-slide__text {
+      flex-basis: 38%; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -777,7 +782,11 @@ body {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .section-title__text {
+    width: 26rem; }
+  .swiper-slide__text {
+    flex-basis: 48%; } }
 
 @media screen and (max-width: 760px) {
   .contacts__phone {
@@ -785,6 +794,18 @@ body {
   .row {
     flex-direction: column;
     align-items: center; }
+  .hero::after {
+    display: none; }
+  .col-50 {
+    width: 100%; }
+  .section-title__word::after {
+    display: none; }
+  .swiper-slide {
+    margin-bottom: 1rem; }
+    .swiper-slide__text {
+      flex-basis: 34%; }
+    .swiper-slide__img {
+      padding-top: 2.42rem; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
@@ -813,7 +834,11 @@ body {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .swiper-slide__heading {
+    font-size: 1rem; }
+  .section-title__heading--primary {
+    font-size: 1.57rem; } }
 
 @media screen and (max-height: 992px) {
   .nav__item {
@@ -830,5 +855,7 @@ body {
     background: #252525; }
     .design__section-title {
       color: #fff; }
+      .design__section-title__subtitle {
+        font-size: 1.2rem; }
   .card__inner::before {
     display: none; } }
