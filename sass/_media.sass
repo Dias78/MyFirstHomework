@@ -60,6 +60,8 @@
   .design
     &__card
       margin-bottom: 5rem
+    &::after
+      height: 90.65rem
 @media screen and ( max-width: 570px )
   .logo
     margin-right: 0
@@ -94,6 +96,14 @@
       flex-basis: 45%
     &__heading
       font-size: 1rem
+  .design
+    background: #252525
+    &__section-title
+      color: $light
+      &__subtitle
+        font-size: 1.2rem
+    &::after
+      display: none
 @media screen and ( max-height: 570px )
   .hero
     &__scroll-down
@@ -117,12 +127,6 @@
   .hero
     &__content
       max-width: 30rem
-  .design
-    background: #252525
-    &__section-title
-      color: $light
-      &__subtitle
-        font-size: 1.2rem
   .card
     &__inner::before
       display: none
