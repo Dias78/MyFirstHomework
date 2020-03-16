@@ -1,3 +1,14 @@
+.design
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    width: 100%
+    height: 34.25rem
+    background-color: $dark
 .section-title
   &__subtitle
     max-width: 53rem
@@ -8,6 +19,8 @@
     margin-top: 1.01rem
     margin-bottom: 3.4rem
 .card
+  position: relative
+  z-index: 3
   &__inner
     position: relative
     &::before

@@ -408,7 +408,8 @@ img {
 
 body {
   font-family: 'Futura Book', sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  overflow-x: hidden; }
 
 .section {
   padding: 60px 0; }
@@ -423,10 +424,11 @@ body {
     .section-title__heading {
       font-family: 'Yeseva One', cursive;
       text-transform: uppercase;
-      line-height: 159%; }
+      line-height: 167%; }
       .section-title__heading--primary {
         color: #E3B873;
-        font-size: 1.72rem; }
+        font-size: 1.76rem;
+        margin: 0; }
     .section-title__word {
       display: flex;
       align-items: center; }
@@ -438,7 +440,7 @@ body {
         margin-left: 2.6rem; }
     .section-title__text {
       font-size: 1.28rem;
-      line-height: 2.07rem;
+      line-height: 2rem;
       max-width: 31.57rem;
       margin-bottom: 3.5rem; }
     .section-title__image {
@@ -596,10 +598,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 4.1rem; }
-  .swiper-slide__img {
-    width: 100%; }
   .swiper-slide__text {
-    flex-basis: 34%;
+    flex-basis: 35%;
     margin-bottom: 1.1rem;
     padding-bottom: 2rem; }
   .swiper-slide__heading {
@@ -634,6 +634,9 @@ body {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -2px; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -675,6 +678,18 @@ body {
   .card__pricetag:hover {
     box-shadow: none; }
 
+.design {
+  position: relative; }
+  .design::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 34.25rem;
+    background-color: #131313; }
+
 .section-title__subtitle {
   max-width: 53rem;
   font-size: 1.42rem;
@@ -684,31 +699,33 @@ body {
   margin-top: 1.01rem;
   margin-bottom: 3.4rem; }
 
-.card__inner {
-  position: relative; }
-  .card__inner::before {
-    content: '';
+.card {
+  position: relative;
+  z-index: 3; }
+  .card__inner {
+    position: relative; }
+    .card__inner::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(19, 19, 19, 0.3); }
+  .card__pricetag--design {
     position: absolute;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(19, 19, 19, 0.3); }
-
-.card__pricetag--design {
-  position: absolute;
-  left: 0;
-  bottom: -1.79rem;
-  font-size: 1.29rem;
-  font-family: 'Yeseva One', cursive;
-  font-weight: normal;
-  text-transform: uppercase;
-  background-color: #E3B873;
-  color: #fff;
-  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
-  padding: 1.214rem 3.9rem; }
-  .card__pricetag--design:hover {
-    box-shadow: none; }
+    bottom: -1.79rem;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
+    padding: 1.214rem 3.9rem; }
+    .card__pricetag--design:hover {
+      box-shadow: none; }
 
 .modal {
   opacity: 0;
@@ -774,7 +791,7 @@ body {
   .swiper-slide {
     flex-basis: 100%; }
     .swiper-slide__text {
-      flex-basis: 38%; } }
+      flex-basis: 50%; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -783,19 +800,23 @@ body {
     display: none; }
   .hero__content {
     margin-left: 0; }
-  .section-title__text {
-    width: 26rem; }
+  .section-title {
+    margin: 0; }
+    .section-title__text {
+      max-width: 26rem; }
   .swiper-slide__text {
     flex-basis: 48%; } }
 
-@media screen and (max-width: 760px) {
-  .contacts__phone {
+@media screen and (max-height: 992px) {
+  .nav__item {
     margin-right: 1rem; }
+  .contacts__phone {
+    margin-right: 2rem; } }
+
+@media screen and (max-width: 760px) {
   .row {
     flex-direction: column;
     align-items: center; }
-  .hero::after {
-    display: none; }
   .col-50 {
     width: 100%; }
   .section-title__word::after {
@@ -827,30 +848,40 @@ body {
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem; }
+    max-width: 26rem; }
   .hero__text {
     font-size: 1.28rem;
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
     margin-bottom: 1.85rem; }
+  .section-title__heading--primary {
+    font-size: 1.57rem; }
   .swiper-slide__heading {
     font-size: 1rem; }
-  .section-title__heading--primary {
-    font-size: 1.57rem; } }
-
-@media screen and (max-height: 992px) {
-  .nav__item {
-    margin-right: 1rem; }
-  .contacts__phone {
-    margin-right: 2rem; } }
+  .swiper-slide__text {
+    flex-basis: 45%; }
+  .swiper-slide__heading {
+    font-size: 1rem; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
     display: none; } }
 
 @media screen and (max-width: 320px) {
+  .hero__button {
+    max-width: 30rem; }
+  .contacts__phone {
+    margin-right: 0; }
+  .section-title__text {
+    font-size: 1rem;
+    line-height: 158%; }
+  .section-title__subtitle {
+    font-size: 1.07rem; }
+  .swiper-slide__text {
+    flex-basis: 50%; }
+  .hero__content {
+    max-width: 30rem; }
   .design {
     background: #252525; }
     .design__section-title {
