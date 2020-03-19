@@ -23,11 +23,16 @@
       margin-left: 0
   .section-title
     margin: 0
+    margin-bottom: 2rem
     &__text
       max-width: 26rem
   .swiper-slide
     &__text
       flex-basis: 48%
+  .control
+    margin-top: -30rem
+    &__section-title
+      margin-bottom: 2.214rem
 @media screen and ( max-height: 992px )
   .nav
     &__item
@@ -51,6 +56,8 @@
       flex-basis: 34%
     &__img
       padding-top: 2.42rem
+  // .control
+  //   flex-basis: 20%
   .types
     &__card
       margin-bottom: 5rem
@@ -96,8 +103,34 @@
       flex-basis: 45%
     &__heading
       font-size: 1rem
+  .control
+    background: lighten($dark, 7.06)
+    &__text
+      color: $light
+    &__input
+      flex-basis: 100%
+      margin-bottom: 4.5rem
+      padding: 0.5rem 0
+      border-bottom: 1px solid rgba($light, 0.3)
+      &::placeholder
+        color: $light
+      &-group
+        flex-basis: 100%
+    &__button
+      flex-basis: 100%
+      font-size: 1.07rem
+    &__policy
+      color: $light
+    &__video
+      flex-basis: 100%
+      min-height: 21.5rem
+  .form
+    max-width: 25rem
+    &__label
+      color: rgba($light, 0.5)
+      margin-bottom: 1px
   .design
-    background: #252525
+    background: lighten($dark, 7.06)
     &__section-title
       color: $light
       &__subtitle
@@ -130,3 +163,25 @@
   .card
     &__inner::before
       display: none
+  .control
+    padding-bottom: 0
+    &__text
+      font-size: 1rem
+      line-height: 158%
+      margin-bottom: 1.85rem
+    &__button
+      order: 1
+      margin-bottom: -1.8rem
+    &__input
+      margin-bottom: 4.14rem
+      &-group
+        flex-basis: 100%
+      &--last
+        margin-bottom: 2px
+  .video
+    max-width: 100%
+    min-height: 100%
+  .policy
+    margin-top: 0
+    margin-bottom: 4.14rem
+
