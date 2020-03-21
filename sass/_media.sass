@@ -146,8 +146,10 @@
       display: none
 @media screen and ( max-width: 320px )
   .hero
-    &__button
+    &__content
       max-width: 30rem
+    &__button
+      width: 100%
   .contacts
     &__phone
       margin-right: 0
@@ -160,9 +162,6 @@
   .swiper-slide
     &__text
       flex-basis: 50%
-  .hero
-    &__content
-      max-width: 30rem
   .card
     &__inner::before
       display: none
@@ -188,5 +187,10 @@
     margin-top: 0
     margin-bottom: 4.14rem
   .footer
+    background: lighten($dark, 7.06)
+    &__wrap
+      width: 100%
+      background-color: inherit
+      padding: 0
     &__button
       width: 100%
