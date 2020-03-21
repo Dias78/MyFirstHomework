@@ -830,6 +830,7 @@ body {
     max-width: 37.142rem;
     margin: auto; }
   .footer__input {
+    color: #fff;
     padding-top: 0.2rem; }
     .footer__input-group {
       display: flex;
@@ -1037,7 +1038,9 @@ body {
       .design__section-title__subtitle {
         font-size: 1.2rem; }
     .design::after {
-      display: none; } }
+      display: none; }
+  .footer__input-group {
+    flex-basis: 100%; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
@@ -1079,4 +1082,6 @@ body {
     min-height: 100%; }
   .policy {
     margin-top: 0;
-    margin-bottom: 4.14rem; } }
+    margin-bottom: 4.14rem; }
+  .footer__button {
+    width: 100%; } }

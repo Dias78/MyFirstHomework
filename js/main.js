@@ -63,6 +63,9 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      policyCheckbox: {
+        required: true
+      },
       // правило-объект (блок)
       userEmail: {
         required: true,
@@ -75,12 +78,80 @@ $(document).ready(function () {
       userName: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв",
-        maxlength: "Имя должен быть не больше пятнадцати букв"
+        maxlength: "Имя должно быть не больше пятнадцати букв"
       },
       userPhone: "Телефон обязателен",
+      policyCheckbox: "Если согласны, ставьте галочку",
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите корректный email"
+      }
+    }
+  });
+
+  // маска для телефона
+  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      firstName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      firstPhone: "required",
+      firstCheckbox: {
+        required: true,
+      }
+    },
+    errorElement: "div",
+    // сообщения
+    messages: {
+      firstName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя должно быть не больше пятнадцати букв"
+      },
+      firstPhone: "Телефон обязателен",
+      firstCheckbox: "Если согласны, ставьте галочку"
+    }
+  });
+
+  // маска для телефона
+  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      lastName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      lastPhone: "required",
+      lastCheckbox: {
+        required: true
+      },
+      // правило-объект (блок)
+      lastQuestion: {
+        required: true,
+      }
+    },
+    errorElement: "div",
+    // сообщения
+    messages: {
+      lastName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя должно быть не больше пятнадцати букв"
+      },
+      lastPhone: "Телефон обязателен",
+      lastCheckbox: "Если согласны, ставьте галочку",
+      lastQuestion: {
+        required: "Введите свой вопрос"
       }
     }
   });
