@@ -813,7 +813,7 @@ body {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-bottom: 3.714rem;
+    margin-bottom: 2.3rem;
     padding: 2.5rem; }
   .footer__title {
     font-family: 'Yeseva One', cursive;
@@ -821,8 +821,12 @@ body {
     font-size: 1.428rem;
     font-style: normal;
     font-weight: normal;
-    text-align: center;
-    margin-bottom: 3.214rem; }
+    text-align: center; }
+    .footer__title--light {
+      margin-bottom: 3.214rem; }
+    .footer__title--primary {
+      color: #E3B873;
+      line-height: 2.2rem; }
   .footer__form {
     display: flex;
     flex-wrap: wrap;
@@ -849,6 +853,31 @@ body {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 66.07rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; }
+  .footer__group {
+    display: flex;
+    flex-direction: column;
+    max-width: 42rem; }
+  .footer__image {
+    align-items: center;
+    margin: auto;
+    margin-bottom: 3.07rem; }
+    .footer__image--img {
+      margin-right: 5px; }
+  .footer__map {
+    width: 66.07rem;
+    max-width: 100%;
+    min-height: 33.21rem;
+    margin: auto;
+    margin-bottom: 5rem; }
 
 .modal {
   opacity: 0;
@@ -1039,8 +1068,16 @@ body {
         font-size: 1.2rem; }
     .design::after {
       display: none; }
-  .footer__input-group {
-    flex-basis: 100%; } }
+  .footer__title {
+    font-size: 1.28rem;
+    line-height: 138%;
+    margin-bottom: 1.64rem; }
+  .footer__input {
+    flex-basis: 100%;
+    max-width: 23rem; }
+  .footer__map {
+    height: 25rem;
+    margin-bottom: 3rem; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
@@ -1053,6 +1090,8 @@ body {
     width: 100%; }
   .contacts__phone {
     margin-right: 0; }
+  .projects {
+    padding-top: 0; }
   .section-title__text {
     font-size: 1rem;
     line-height: 158%; }
@@ -1083,11 +1122,22 @@ body {
   .policy {
     margin-top: 0;
     margin-bottom: 4.14rem; }
+  .design {
+    padding-bottom: 0; }
   .footer {
-    background: #252525; }
+    background: none;
+    background-color: #252525; }
     .footer__wrap {
       width: 100%;
-      background-color: inherit;
+      background-color: #252525;
       padding: 0; }
+    .footer__input-group {
+      flex-basis: 100%; }
     .footer__button {
-      width: 100%; } }
+      width: 100%; }
+    .footer__menu {
+      display: none; }
+    .footer__group {
+      order: 1; }
+    .footer__image {
+      margin-bottom: 2.71rem; } }

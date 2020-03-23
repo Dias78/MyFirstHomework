@@ -6,7 +6,7 @@
     background-color: $black
     max-width: 63.07rem
     margin: auto
-    margin-bottom: 3.714rem
+    margin-bottom: 2.3rem
     padding: 2.5rem
   &__title
     font-family: 'Yeseva One', cursive
@@ -15,7 +15,11 @@
     font-style: normal
     font-weight: normal
     text-align: center
-    margin-bottom: 3.214rem
+    &--light
+      margin-bottom: 3.214rem
+    &--primary
+      color: $primary
+      line-height: 2.2rem
   &__form
     display: flex
     flex-wrap: wrap
@@ -42,3 +46,28 @@
   &__menu
     background-color: $dark
     padding: 4.285rem 0
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 66.07rem
+    max-width: 100%
+    max-height: 100%
+    margin: auto
+  &__group
+    display: flex
+    flex-direction: column
+    max-width: 42rem
+  &__image
+    align-items: center
+    margin: auto
+    margin-bottom: 3.07rem
+    &--img
+      margin-right: 5px
+  &__map
+    width: 66.07rem
+    max-width: 100%
+    min-height: 33.21rem
+    margin: auto
+    margin-bottom: 5rem

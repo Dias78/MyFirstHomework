@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=deb56256-ead0-4bcf-9bfd-e111be2fb100&lang=ru_RU" type="text/javascript">
+  </script>
   <title>Знакомство с Gulp</title>
 </head>
 <body>
@@ -223,10 +225,7 @@
             <input type="tel" name="firstPhone" class="input form__input control__input control__input--last" id="first-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group -->
-          <div class="input-group">
             <button class="button button--primary control__button">Отправить</button>
-          </div>
-          <!-- /.input-group -->
           <div class="policy control__policy">
             <input type="checkbox" name="firstCheckbox" id="first-checkbox" class="policy__checkbox" checked>
             <label for="first-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
@@ -491,7 +490,7 @@
   <footer class="footer section--dark">
     <div class="container">
       <div class="footer__wrap">
-        <h3 class="footer__title">Остались вопросы?</h3>
+        <h3 class="footer__title footer__title--light">Остались вопросы?</h3>
         <form action="#" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="last-name" class="label form__label label--light">Имя</label>
@@ -521,6 +520,20 @@
         <!-- /.form footer__form -->
       </div>
       <!-- /.footer-wrap -->
+      <div class="footer__inner">
+        <div class="footer__group">
+          <h2 class="footer__title footer__title--primary">Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99</h2>
+          <div class="footer__image">
+            <img src="img/email.svg" alt="email" class="footer__image--img">
+            <img src="img/instagram.svg" alt="instagram" class="footer__image--img">
+          </div>
+          <!-- /.section-title__image -->
+        </div>
+        <!-- /.footer__group -->
+        <div class="map footer__map" id="map"></div>
+        <!-- /.map footer__map -->
+      </div>
+      <!-- /.footer-inner -->
     </div>
     <!-- /.container -->
     <div class="footer__menu">
