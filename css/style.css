@@ -835,7 +835,18 @@ body {
     margin: auto; }
   .footer__input {
     color: #fff;
-    padding-top: 0.2rem; }
+    padding-top: 0.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    .footer__input::-webkit-input-placeholder {
+      color: #fff; }
+    .footer__input::-moz-placeholder {
+      color: #fff; }
+    .footer__input:-ms-input-placeholder {
+      color: #fff; }
+    .footer__input::-ms-input-placeholder {
+      color: #fff; }
+    .footer__input::placeholder {
+      color: #fff; }
     .footer__input-group {
       display: flex;
       flex-direction: column;
@@ -872,12 +883,13 @@ body {
     margin-bottom: 3.07rem; }
     .footer__image--img {
       margin-right: 5px; }
-  .footer__map {
-    width: 66.07rem;
-    max-width: 100%;
-    min-height: 33.21rem;
-    margin: auto;
-    margin-bottom: 5rem; }
+
+#map {
+  width: 66.07rem;
+  max-width: 100%;
+  min-height: 33.21rem;
+  margin: auto;
+  margin-bottom: 5rem; }
 
 .modal {
   opacity: 0;
@@ -1072,12 +1084,9 @@ body {
     font-size: 1.28rem;
     line-height: 138%;
     margin-bottom: 1.64rem; }
-  .footer__input {
+  .footer__input__group {
     flex-basis: 100%;
-    max-width: 23rem; }
-  .footer__map {
-    height: 25rem;
-    margin-bottom: 3rem; } }
+    max-width: 23rem; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
@@ -1101,6 +1110,8 @@ body {
     flex-basis: 50%; }
   .card__inner::before {
     display: none; }
+  .types {
+    padding: 4.14rem 0 0 0; }
   .control {
     padding-bottom: 0; }
     .control__text {
@@ -1123,7 +1134,7 @@ body {
     margin-top: 0;
     margin-bottom: 4.14rem; }
   .design {
-    padding-bottom: 0; }
+    padding: 3.71rem 0 0 0; }
   .footer {
     background: none;
     background-color: #252525; }
@@ -1140,4 +1151,7 @@ body {
     .footer__group {
       order: 1; }
     .footer__image {
-      margin-bottom: 2.71rem; } }
+      margin-bottom: 2.71rem; }
+  #map {
+    min-height: 18rem !important;
+    margin-bottom: 3rem; } }

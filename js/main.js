@@ -186,6 +186,7 @@ $(document).ready(function () {
             center: [43.250744, 76.956847],
             zoom: 9
         }, {
+            autoFitToViewport: 'always',
             searchControlProvider: 'yandex#search'
         }),
 
@@ -213,7 +214,7 @@ $(document).ready(function () {
     myMap.geoObjects
         .add(myPlacemark);
 
-
+    myMap.behaviors.disable('scrollZoom');
   });
 
 });

@@ -144,12 +144,8 @@
       margin-bottom: 1.64rem
     &__input
       &__group
-      flex-basis: 100%
-      max-width: 23rem
-    &__map
-      height: 25rem
-      margin-bottom: 3rem
-
+        flex-basis: 100%
+        max-width: 23rem
 @media screen and ( max-height: 570px )
   .hero
     &__scroll-down
@@ -177,6 +173,8 @@
   .card
     &__inner::before
       display: none
+  .types
+    padding: 4.14rem 0 0 0
   .control
     padding-bottom: 0
     &__text
@@ -199,7 +197,7 @@
     margin-top: 0
     margin-bottom: 4.14rem
   .design
-    padding-bottom: 0
+    padding: 3.71rem 0 0 0
   .footer
     background: none
     background-color: lighten($dark, 7.06)
@@ -217,3 +215,6 @@
       order: 1
     &__image
       margin-bottom: 2.71rem
+  #map
+    min-height: 18rem !important
+    margin-bottom: 3rem
