@@ -1082,7 +1082,10 @@ body {
     margin-bottom: 1.64rem; }
   .footer__input__group {
     width: 100%;
-    max-width: 20rem; } }
+    max-width: 20rem; }
+  .footer__map {
+    height: 18rem;
+    margin-bottom: 3rem; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
@@ -1147,7 +1150,4 @@ body {
     .footer__group {
       order: 1; }
     .footer__image {
-      margin-bottom: 2.71rem; }
-    .footer__map {
-      height: 18rem;
-      margin-bottom: 3rem; } }
+      margin-bottom: 2.71rem; } }
